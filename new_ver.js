@@ -33,6 +33,19 @@ function getComputerChoice() {
     const Choice = Math.floor(Math.random()*3);
     return arr[Choice];
     }
+function reset() {
+    playerScore = 0;
+    computerScore = 0;
+    
+    playerScoreSpan.textContent = playerScore;
+    computerScoreSpan.textContent = computerScore;
+    results.innerHTML = "Game reset. Start playing again!";
+
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorBtn.disabled = false;
+
+}
 
 function playRound(humanChoice) {
 
@@ -63,13 +76,22 @@ function playRound(humanChoice) {
 
     if (playerScore === 5) {
         results.innerHTML=`<h1> <strong> Player won the game ;) </strong> </h1>`
-        results.style.color = "yellow";
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorBtn.disabled = true;
+        setTimeout(reset,5000);
     }else if(computerScore===5){
         results.innerHTML=`<h1> <strong> Computer won the game lol </strong> </h1>`
-        results.style.color ="green";
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorBtn.disabled = true;
+        setTimeout(reset,5000);
     }
 
-    }
+}
+
+
+
 
 
 
