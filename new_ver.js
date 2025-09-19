@@ -39,7 +39,7 @@ function playRound(humanChoice) {
     const computerChoice = getComputerChoice();
 
     if (humanChoice === computerChoice){
-        results.innerHTML = `it's a tie breaker <br>`
+        results.innerHTML = `<h2>it's a tie breaker</h2> <br><br>`
         // console.log("it's a tie breaker");
     }
     else if (
@@ -47,12 +47,12 @@ function playRound(humanChoice) {
         (humanChoice ==="paper" && computerChoice ==="rock") ||
         (humanChoice ==="scissors" && computerChoice ==="paper")
     ) {
-        results.innerHTML = ` You Win this round! <br> ${humanChoice} beats ${computerChoice} + "."  `
+        results.innerHTML = ` <h2> You Win this round! <br><br> ${humanChoice} beats ${computerChoice}. </h2> `
         playerScore++;
         // console.log("You Win!" + humanChoice + "beats " + computerChoice + ".");
     }
     else {
-        results.innerHTML = ` You Lost this round! <br> ${computerChoice} beats ${humanChoice} + "." `
+        results.innerHTML = ` <h2> You Lost this round! <br><br> ${computerChoice} beats ${humanChoice}. </h2> `
         computerScore++;
         // console.log("You Lost!" + computerChoice + "beats " + humanChoice + ".");
     }

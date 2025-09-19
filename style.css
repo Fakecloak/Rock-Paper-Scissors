@@ -1,0 +1,40 @@
+.buttons {
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    justify-content:center;
+    gap:30px;
+    cursor: pointer;
+}
+
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.buttons > #rock,#paper,#scissors {
+    color: white;
+    background-color: yellowgreen;
+    padding: 20px;
+    font-size: 18px;
+    margin:10px;
+}
+
+.results{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    
+    padding:20px;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    font-size:24px;
+    font-style:bold;
+    gap:10px;
+    background-color: aquamarine;
+    padding: 20px;
+
+}
